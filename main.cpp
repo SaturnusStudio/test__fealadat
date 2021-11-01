@@ -55,7 +55,7 @@ void publishMessage()
 {
   StaticJsonDocument<200> doc;
   doc["time"] = millis();
-  doc["sensor_a0"] = analogRead(35);
+  doc["output"] = digitalRead(1);
   char jsonBuffer[512];
   serializeJson(doc, jsonBuffer); // print to client
 
